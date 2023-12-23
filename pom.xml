@@ -42,12 +42,8 @@
 				<jvm.args.perm.size>-XX:MaxMetaspaceSize=128m</jvm.args.perm.size>
 				<jvm.args.gc.log.path>-Xlog:gc*:logs/gc_%p_%t.log:time,level,tags:filecount=5,filesize=10M</jvm.args.gc.log.path>
 				<!-- TODO Remove these properties -->
-				<jvm.args.print.heap.at.gc>-Dummy=Dummy</jvm.args.print.heap.at.gc>
-				<jvm.args.print.gc.details>-Dummy=Dummy</jvm.args.print.gc.details>
-				<jvm.args.print.gc.date.stamps>-Dummy=Dummy</jvm.args.print.gc.date.stamps>
-				<jvm.args.gc.log.file.rotation>-Dummy=Dummy</jvm.args.gc.log.file.rotation>
-				<jvm.args.number.of.gc.log.files>-Dummy=Dummy</jvm.args.number.of.gc.log.files>
-				<jvm.args.gc.log.file.size>-Dummy=Dummy</jvm.args.gc.log.file.size>
+  				<sonar.organization>bugflow</sonar.organization>
+  				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 			</properties>
 		</profile>
 	</profiles>
@@ -133,10 +129,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -187,7 +183,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
+				<version>3.4.0</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<warName>ROOT</warName>
